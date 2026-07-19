@@ -1,0 +1,26 @@
+package aspn_r;
+
+// Message used to request the stored values from the parameter server.
+
+struct param_request
+{
+    // Non ASPN. Do not use. Extra field encoding the struct name to disambiguate LCM type fingerprint hashes.
+    int8_t icd_param_request;
+    
+    // Description:  Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number
+    // nanoseconds until timestamp's zero epoch.
+    // Units: nanoseconds
+    int64_t elapsed_nsec;
+
+    // Description:  Number of group/key/value sets being sent in this message.
+    // Units:  None
+    int16_t num_entries;
+
+    // Description:  Name of the group the key and value belong to in the parameter server.
+    // Units:  None
+    string group[num_entries];
+
+    // Description:  Key value of the paramter in the parameter server being referenced.
+    // Units:  None
+    string key[num_entries];
+}

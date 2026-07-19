@@ -1,0 +1,14 @@
+#ifndef __ASPN23_EXTENDEDPARAMCONFIGS__
+#define __ASPN23_EXTENDEDPARAMCONFIGS__
+
+module aspn_r {
+    @topic
+    struct ExtendedParamConfigs {
+        uint64 elapsed_nsec;
+        uint16 num_entries;
+        sequence<string> group;
+        sequence<string> key;
+        sequence<string> value;
+        };
+    };
+#endif

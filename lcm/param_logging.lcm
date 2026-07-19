@@ -1,0 +1,19 @@
+package aspn_r;
+
+// A message intended for logging things that occur during a test to give further context in the future data analysis.
+// Examples, Sensor A died at time 1445, sensor A came back online at 1449.  Heavy rain started coming down at 1500.  
+
+struct param_logging
+{  
+  // Non ASPN. Do not use. Extra field encoding the struct name to disambiguate LCM type fingerprint hashes.
+  int8_t icd_param_logging;
+
+  // Description:  Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number
+  // nanoseconds until timestamp's zero epoch.
+  // Units: nanoseconds
+  int64_t elapsed_nsec;
+
+  // Description:  A string of text to be recorded in the log giving context to what has occured in the log/experiment. 
+  // Units:  None
+  string value;
+}

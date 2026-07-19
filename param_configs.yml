@@ -1,0 +1,35 @@
+name: param_configs
+version: 1.0
+system_type: standard
+category: param_server
+controlled: no
+distribution: A
+experimental: false
+description: >
+  Message used to set, or update a parameter in the parameter server.  This captures the group, key, and value to be added, or changed.
+fields:
+- name: elapsed_nsec
+  type: int64
+  units: nanoseconds
+  description: >
+    Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number nanoseconds until timestamp's zero epoch.
+
+- name: num_entries
+  type: int16_t
+  description: >
+    Number of group/key/value sets being sent in this message.
+
+- name: group[num_entries]
+  type: string
+  description: >
+    Name of the group the key and value belong to in the parameter server.
+
+- name: key[num_entries]
+  type: string
+  description: >
+    Key value of the paramter in the parameter server being referenced.
+
+- name: value[num_entries]
+  type: string
+  description: >
+    Value of of the key in the parameter server.  

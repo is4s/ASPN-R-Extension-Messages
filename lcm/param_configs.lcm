@@ -1,0 +1,34 @@
+package aspn_r;
+
+// Message used to set, or update a parameter in the parameter server.  This captures the group, key, and value to be added, or changed.
+
+struct param_configs
+{
+    // Non ASPN. Do not use. Extra field encoding the struct name to disambiguate LCM type fingerprint hashes.
+    int8_t icd_param_configs;
+
+    // Description:  Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number
+    // nanoseconds until timestamp's zero epoch.
+    // Units: nanoseconds
+    int64_t elapsed_nsec;
+
+    // Description:  Number of group/key/value sets being sent in this message.
+    // Units:  None
+    int16_t num_entries;
+
+    // Description:  Name of the group the key and value belong to in the parameter server.
+    // Units:  None
+    string group[num_entries];
+
+    // Description:  Key value of the paramter in the parameter server being referenced.
+    // Units:  None
+    string key[num_entries];
+
+    // Description:  Value of of the key in the parameter server.  
+    // Units:  None
+    string value[num_entries];
+}
+
+
+
+
