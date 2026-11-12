@@ -1,0 +1,21 @@
+
+// This code is generated via firehose.
+// DO NOT hand edit code.  Make any changes required using the firehose repo instead
+
+#ifndef __ASPN_R_DDS_PARAMRETURN__
+#define __ASPN_R_DDS_PARAMRETURN__
+
+module aspn_r_dds {
+    
+    @topic
+    struct ParamReturn {
+        int64 elapsed_nsec;
+        int16 num_entries;
+        sequence<string> group;
+        sequence<string> key;
+        sequence<string> value;
+        sequence<int8> return_codes;
+    };
+};
+
+#endif

@@ -1,0 +1,20 @@
+
+// This code is generated via firehose.
+// DO NOT hand edit code.  Make any changes required using the firehose repo instead
+
+#ifndef __ASPN_R_DDS_PARAMCONFIGS__
+#define __ASPN_R_DDS_PARAMCONFIGS__
+
+module aspn_r_dds {
+    
+    @topic
+    struct ParamConfigs {
+        int64 elapsed_nsec;
+        int16 num_entries;
+        sequence<string> group;
+        sequence<string> key;
+        sequence<string> value;
+    };
+};
+
+#endif

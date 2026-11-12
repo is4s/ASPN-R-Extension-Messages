@@ -1,0 +1,19 @@
+
+// This code is generated via firehose.
+// DO NOT hand edit code.  Make any changes required using the firehose repo instead
+
+#ifndef __ASPN_R_DDS_PARAMREQUEST__
+#define __ASPN_R_DDS_PARAMREQUEST__
+
+module aspn_r_dds {
+    
+    @topic
+    struct ParamRequest {
+        int64 elapsed_nsec;
+        int16 num_entries;
+        sequence<string> group;
+        sequence<string> key;
+    };
+};
+
+#endif
