@@ -6,14 +6,15 @@ controlled: no
 distribution: A
 experimental: false
 description: >
-  A message intended for logging things that occur during a test to give further context in the future data analysis. Examples, Sensor A died at time 1445, sensor A came back online at 1449.  Heavy rain started coming down at 1500.  
+  A message intended for logging things that occur during a test to give further context in the future data analysis. Examples, Sensor A died at time 1445, sensor A came back online at 1449.  Heavy rain started coming down at 1500.
 fields:
-- name: elapsed_nsec  
-  type: int64  
-  units: nanoseconds  
+- name: elapsed_nsec
+  type: int64
+  units: nanoseconds
   description: >
     Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number nanoseconds until timestamp's zero epoch.
+
 - name: value
   type: string
   description: >
-    A string of text to be recorded in the log giving context to what has occured in the log/experiment. 
+    A string of text to be recorded in the log giving context to what has occurred in the log/experiment.

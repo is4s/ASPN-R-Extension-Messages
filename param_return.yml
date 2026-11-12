@@ -15,27 +15,27 @@ fields:
     Whole number nanoseconds elapsed since timestamp's zero epoch. If negative, whole number nanoseconds until timestamp's zero epoch.
 
 - name: num_entries
-  type: int16_t
+  type: int16
   description: >
     Number of group/key/value sets being sent in this message.
 
-- name: group[num_entries]
-  type: string
+- name: group
+  type: string[num_entries]
   description: >
     Name of the group the key and value belong to in the parameter server.
 
-- name: key[num_entries]
-  type: string
+- name: key
+  type: string[num_entries]
   description: >
     Key value of the paramter in the parameter server being referenced.
 
-- name: value[num_entries]
-  type: string
+- name: value
+  type: string[num_entries]
   description: >
-    Value of of the key in the parameter server.  
+    Value of the key in the parameter server.  
 
-- name: return_codes[num_entries]
-  type: int8_t
+- name: return_codes
+  type: int8[num_entries]
   description: >
     Return codes for pass or fail status when changing or setting a parameter in the parameter server.  
     Valid 0
