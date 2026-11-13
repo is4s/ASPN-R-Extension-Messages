@@ -24,6 +24,9 @@ lcm-gen -j lcm/*.lcm --jpath generated/java
 lcm-gen -x lcm/*.lcm --cpp-hpath generated/cpp
 lcm-gen -c lcm/*.lcm --c-cpath generated/c/src --c-hpath generated/c/include
 
+# Regenerate fingerprints to check for changes
+./fingerprints.py
+
 # Rebuild LCM JAR
 export LCM_JAR_PATH=$VIRTUAL_ENV/lib/python3.*/site-packages/share/java/lcm.jar
 cd generated/
