@@ -59,7 +59,10 @@ public final class param_return implements lcm.lcm.LCMEncodable
 
     /**
      * Description: Return codes for pass or fail status when changing or setting a parameter in the
-     * parameter server. Valid 0 FAILED -1 More return codes can be added and handled by the system.
+     * parameter server.
+     * Valid 0
+     * FAILED -1
+     * More return codes can be added and handled by the system.
      * Units: none
      * LCM Type: int8_t[num_entries]
      */
