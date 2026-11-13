@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+project.layout.buildDirectory='../../output/lcm/gradle/'
+
+sourceSets {
+    main {
+        compileClasspath=files(System.getenv('LCM_JAR_PATH'))
+        java.srcDirs=['../../output/lcm/java/']
+    }
+}
+
+jar {
+    // Renamed to `archiveFileName` & `destinationDirectory` past Gradle v8.0
+    archiveFileName='aspn_r.jar'
+    destinationDirectory=file('java/')
+    includes=['**/*.class']
+    preserveFileTimestamps=false
+    reproducibleFileOrder=true
+}
